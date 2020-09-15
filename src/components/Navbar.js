@@ -4,9 +4,9 @@ import Identicon from 'identicon.js';
 class Navbar extends Component {
     render() {
         return(
-            <nav className="navbar navbar-dark fixed-top bg-primary flex-md-nowrap p-0 shadow">
+            <nav className="navbar navbar-dark fixed-top bg-primary flex-md-nowrap shadow p-8">
             <a
-                className="navbar-brand col-sm-4 col-md-3 mr-0"
+                className="navbar-brand col-sm-6 col-md-4 mr-0"
                 href="http://www.dappuniversity.com/bootcamp"
                 target="_blank"
                 rel="noopener noreferrer"

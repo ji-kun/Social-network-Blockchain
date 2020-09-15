@@ -10,3 +10,5 @@ ReactDOM.render(<App />, document.getElementById('root'));
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+//Call for Help: As the world wages a common war against coronavirus, Assam is fighting another war: the floods. Read more at: https://yourstory.com/socialstory/2020/08/help-affected-flood-assam-disaster-relief
