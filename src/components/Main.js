@@ -20,7 +20,7 @@ class Main extends Component {
                                     type="text"
                                     ref={(input) => { this.postContent = input }}
                                     className="form-control"
-                                    placeholder="What's on your mind?"
+                                    placeholder="How are you feeling today?"
                                     required
                                 />
                             </div>
@@ -46,7 +46,7 @@ class Main extends Component {
                                     Tips: {window.web3.utils.fromWei(post.tipAmount.toString(), 'ether')} ETH
                                     </small>
                                     <button 
-                                        className="btn btn-link btn-sm float-right pt-0"
+                                        className="btn btn-link .bg-info btn-sm float-right pt-0 "
                                         onClick = {(event) => {
                                             //Post ID
                                             // event.target.name

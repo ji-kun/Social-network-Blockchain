@@ -12,7 +12,7 @@ class App extends Component {
 
   async componentWillMount() {
     await this.loadWeb3()
-    await this.loadBlockchainData()
+    await this.loadData()
   }
 
   async loadWeb3() {
@@ -24,21 +24,21 @@ class App extends Component {
       window.web3 = new Web3(window.web3.currentProvider)
     }
     else {
-      window.alert('Non-Ethereum browser detected. Try Metamask!')
+      window.alert('Non-Ethereum browser is detected. Try a cryptographic wallet!')
     }
   } 
 
-  async loadBlockchainData() {
-    const web3 = window.web3
+  async loadData() {
+    const webthree = window.web3
     // Load account
-    const accounts = await web3.eth.getAccounts()
+    const accounts = await webthree.eth.getAccounts()
     console.log(accounts)
     this.setState({ account: accounts[0] })
     //NetworkId
-    const networkId = await web3.eth.net.getId()
+    const networkId = await webthree.eth.net.getId()
     const networkData = SocialNetwork.networks[networkId]
     if( networkData ) {
-      const socialNetwork = web3.eth.Contract(SocialNetwork.abi, networkData.address)
+      const socialNetwork = webthree.eth.Contract(SocialNetwork.abi, networkData.address)
       this.setState({ socialNetwork })
       const postCount = await socialNetwork.methods.postCount().call()
       this.setState({ postCount })
